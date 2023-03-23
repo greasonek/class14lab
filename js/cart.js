@@ -19,9 +19,13 @@ function renderCart() {
 
 // TODO: Remove all of the rows (tr) in the cart table (tbody)
 function clearCart() {}
+let cart = document.getElementById('tbody');
+table.removeItem('tr');
+
 
 // TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
 function showCart() {
+let tbody = document.getElementById('cart');
 
   // TODO: Find the table body
 
@@ -33,7 +37,8 @@ function showCart() {
 }
 
 function removeItemFromCart(event) {
-
+// HOW TO TARGET INDEX FROM TABLE
+// HOW ASSIGN CLASS TO USE OR PARENT NODE? TAKE DATA FROM TABLE AND UTILIZE
   // TODO: When a delete link is clicked, use cart.removeItem to remove the correct item
   // TODO: Save the cart back to local storage
   // TODO: Re-draw the cart table

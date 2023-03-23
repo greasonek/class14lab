@@ -3,7 +3,16 @@
 'use strict';
 
 // Set up an empty cart for use on this page.
-state.cart = new Cart([]);
+// TERNARY! vvv
+// state.cart = localStorage.cart ? new Cart(JSON.parse(localStorage.cart)) : new Cart([]);
+if(localStorage.cart){
+  state.cart = new Cart(JSON.parse('localStorage.cart'));
+  updateCartPreview(state.cart);
+  state.cart.updateCounter();
+  updateCartPreview();
+} else {
+  state.cart = new Cart([]);
+}
 
 // On screen load, we call this method to put all of the product options
 // (the things in the state.allProducts array) into the drop down list.
@@ -16,16 +25,9 @@ function populateForm() {
     optionTag.value = state.allProducts[i].name;
     optionTag.textContent = state.allProducts[i].name;
     selectElement.appendChild(optionTag);
-
-
-
   }
 
 }
-
-
-
-
 
 // When someone submits the form, we need to add the selected item to the cart
 // object, save the whole thing back to local storage and update the screen
@@ -61,12 +63,15 @@ function updateCartPreview() {
 
   // TODO: Get the item and quantity from the form
   // TODO: add nAew element to the cartContents div with that information
+
+  // TODO: Add a new element to the cartContents div with that information
+  let cartContents = document.getElementById('cartContents');
+  let listElem = document.createElement('ul');
+  cartContents.appendChild(listElem);
+  let liElem = document.createElement('li');
+  liElem.textContent = `${quantity} ${product}`;
+  listElem.appendChild(liElem);
 }
-
-
-
-
-
 
 
 // Set up the "submit" event listener on the form.
