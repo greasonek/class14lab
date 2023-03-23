@@ -25,9 +25,21 @@ table.removeItem('tr');
 
 // TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
 function showCart() {
-let tbody = document.getElementById('cart');
+let tbody = document.querySelector('#cart tbody');
+for(let i = 0; i < cartItems.length; i ++) {
+  let tr = document.createElement('td');
+  td.textContent = state.cart[i];
+  tr.appendChild(tbody); 
 
-  // TODO: Find the table body
+  var cell = row.insertcell(-1);
+  cell.setAttribute(item);
+
+}
+
+
+
+ 
+// TODO: Find the table body
 
   // TODO: Iterate over the items in the cart
   // TODO: Create a TR
@@ -37,6 +49,7 @@ let tbody = document.getElementById('cart');
 }
 
 function removeItemFromCart(event) {
+
 // HOW TO TARGET INDEX FROM TABLE
 // HOW ASSIGN CLASS TO USE OR PARENT NODE? TAKE DATA FROM TABLE AND UTILIZE
   // TODO: When a delete link is clicked, use cart.removeItem to remove the correct item

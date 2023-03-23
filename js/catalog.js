@@ -6,10 +6,10 @@
 // TERNARY! vvv
 // state.cart = localStorage.cart ? new Cart(JSON.parse(localStorage.cart)) : new Cart([]);
 if(localStorage.cart){
-  state.cart = new Cart(JSON.parse('localStorage.cart'));
+  state.cart = new Cart(JSON.parse(localStorage.cart));
   updateCartPreview(state.cart);
   state.cart.updateCounter();
-  updateCartPreview();
+  
 } else {
   state.cart = new Cart([]);
 }

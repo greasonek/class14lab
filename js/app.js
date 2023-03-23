@@ -24,6 +24,11 @@ Cart.prototype.saveToLocalStorage = function() {
 };
 
 Cart.prototype.removeItem = function(item) {
+  
+  // let removeItem = CartItem( product, quantity);
+
+  // this.items.splice();
+
   // array mehods - splice? or filter()?
   // TODO: Fill in this instance method to remove one item from the cart.
   // Note: You will have to decide what kind of parameter to pass in here!
