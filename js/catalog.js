@@ -26,7 +26,7 @@ function populateForm() {
     optionTag.textContent = state.allProducts[i].name;
     selectElement.appendChild(optionTag);
   }
-
+ 
 }
 
 // When someone submits the form, we need to add the selected item to the cart
