@@ -15,14 +15,53 @@ header {
 
 nav {
   display: inline-block;
+  padding:10px;
 }
 li{
   display: inline;
-  text-decoration: none;
   padding: 10px;
   color: slateblue
 }
+li a{
+  text-decoration: none;
+  color:slateblue;
+}
+
+.copy li {
+  display: flex;
+  padding:5px;
+  }
+
+legend {
+  font-size: 35px;
+  color: slateblue;
+  text-align: center;
+}  
+
+#cartContents {
+  color: darkcyan;
+  background-color: lightcyan;
+  border: 3px solid  slateblue;
+  padding: 10px;
+  margin:20px;
+  width:200px;
+}
+
 footer {
   padding: 30px;
+  text-align: center;
+}
+table {
+  background-color: lightcyan;
+  border: 3px solid slateblue;
+  padding: 10px;
+  margin: 30px;
+}
+
+th, td, tr {
+  color: darkcyan;
+  height: 10px;
+  border: 1px solid slateblue;
+  padding: 10px;
   text-align: center;
 }
