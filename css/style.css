@@ -8,9 +8,21 @@ body {
 }
 
 header {
+  font-size: 30px;
   padding:20px;
+  text-align: center;
 }
 
+nav {
+  display: inline-block;
+}
+li{
+  display: inline;
+  text-decoration: none;
+  padding: 10px;
+  color: slateblue
+}
 footer {
-  f
+  padding: 30px;
+  text-align: center;
 }

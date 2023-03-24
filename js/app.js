@@ -6,6 +6,8 @@ const state = {
   cart: null,
 };
 
+let quantityInCart = 0;
+
 // Cart constructor.
 const Cart = function(items) {
   // this.items is an array of CartItem instances.
@@ -24,7 +26,9 @@ Cart.prototype.saveToLocalStorage = function() {
 };
 
 Cart.prototype.removeItem = function(item) {
-  
+  // let index = this.items.indexOf(item);
+  this.items.splice(index, 1);
+  state.cart.saveToLocalStorage();
   // let removeItem = CartItem( product, quantity);
 
   // this.items.splice();
@@ -36,8 +40,12 @@ Cart.prototype.removeItem = function(item) {
 
 Cart.prototype.updateCounter = function() {
   // TODO: Update the cart count in the header nav with the number of items in the Cart
-  let count = document.getElementById('itemCount');
-  count.textContent = this.items.length;
+for(let i = 0; i < this.items.length; i++){
+  quantityInCart += +this.items[i].quantity
+}
+document.getElementById('itemCount').textContent = quantityInCart;
+// let count = document.getElementById('itemCount');
+// count.textContent = this.items.length;
 }
 
 const CartItem = function(product, quantity) {
