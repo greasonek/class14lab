@@ -2,7 +2,7 @@
 'use strict';
 
 // Create an event listener so that when the delete link is clicked, the removeItemFromCart method is invoked.
-const table = document.createElementById('cart');
+const table = document.getElementById('cart');
 table.addEventListener('click', removeItemFromCart);
 
 function loadCart() {
@@ -70,6 +70,11 @@ for(let i = 0; i < state.cart.items.length; i++) {
 
 
 function removeItemFromCart(event) {
+// let targetId = event.target.id;
+// let deleteButton= document.querySelectorAll('deleteButton');
+// for(let i = 0; i < deleteButton.length; i++){
+//   deleteButton[i].addEventListener('click', removeItemFromCart);
+// }
 if(event.target.innerHTML === 'x'){
   let productName = event.target.parentNode.className;
   state.cart.removeItem(productName);

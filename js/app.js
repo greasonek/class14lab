@@ -26,7 +26,7 @@ Cart.prototype.saveToLocalStorage = function() {
 };
 
 Cart.prototype.removeItem = function(item) {
-  // let index = this.items.indexOf(item);
+  let index = this.items.indexOf(item);
   this.items.splice(index, 1);
   state.cart.saveToLocalStorage();
   // let removeItem = CartItem( product, quantity);
